@@ -1,0 +1,23 @@
+name: "Docker Publish Action"
+description: "Publish Docker image to specific registry"
+inputs:
+  docker-registry:
+    description: "Docker registry to publish the image at"
+    default: "docker.pkg.github.com"
+    required: false
+  docker-image-name:
+    description: "What to name the Docker image when publishing to registry"
+    required: true
+  docker-image-tags:
+    description: "What tags should be used for the image in the registry"
+    required: true
+  username:
+    description: "Docker registry username"
+    required: true
+  password:
+    description: "Docker registry password"
+    required: true
+
+runs:
+  using: "node12"
+  main: "index.js"

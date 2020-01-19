@@ -10,7 +10,8 @@ inputs:
     required: true
   docker-image-tags:
     description: "What tags should be used for the image in the registry"
-    required: true
+    default: "latest"
+    required: false
   username:
     description: "Docker registry username"
     required: true
